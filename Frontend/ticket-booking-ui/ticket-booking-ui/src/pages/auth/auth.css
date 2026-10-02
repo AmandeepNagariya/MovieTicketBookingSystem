@@ -1,0 +1,38 @@
+.auth-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.auth-card {
+  width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* toggle buttons */
+.toggle-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.toggle-group button {
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 20px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-group .active {
+  background: white;
+  color: black;
+}
