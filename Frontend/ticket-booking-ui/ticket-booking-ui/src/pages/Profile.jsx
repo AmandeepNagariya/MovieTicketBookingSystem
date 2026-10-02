@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../services/api";
 
-const API_BASE_URL = "https://localhost:7191"; 
+const API_BASE = process.env.REACT_APP_API_URL;
 
 export default function Profile() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user") || "{}"));
@@ -13,8 +13,10 @@ export default function Profile() {
   });
 
   const [previewUrl, setPreviewUrl] = useState(
-    user.profilePicture ? `${API_BASE_URL}${user.profilePicture}` : "https://i.pravatar.cc/100"
-  );
+  user.profilePicture
+    ? `${API_BASE}${user.profilePicture}`
+    : "https://i.pravatar.cc/100"
+);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];

@@ -24,7 +24,7 @@ export default function ProfileDropdown({ user }) {
   };
 
   // 🔥 IMPORTANT: Check your .NET port here (7191 or 7123)
-  const API_BASE = "https://localhost:7191"; 
+ const API_BASE = process.env.REACT_APP_API_URL;
 
   const imageUrl = user?.profilePicture
     ? `${API_BASE}${user.profilePicture}`

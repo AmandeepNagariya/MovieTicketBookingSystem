@@ -15,9 +15,12 @@ builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "https://movie-ticket-booking-system-psi-two.vercel.app"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 

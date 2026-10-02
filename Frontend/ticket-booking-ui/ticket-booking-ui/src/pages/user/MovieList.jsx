@@ -14,11 +14,17 @@ export default function MovieList() {
   return (
     <div className="container">
 
-      <button className="btn btn-secondary mb-3"
-        onClick={() => window.open("https://localhost:7191/api/pdf/movies")}>
-        Download Schedule PDF
-      </button>
-
+   <button
+  className="btn btn-secondary mb-3"
+  onClick={() =>
+    window.open(
+      `${process.env.REACT_APP_API_URL}/api/pdf/movies`,
+      "_blank"
+    )
+  }
+>
+  Download Schedule PDF
+</button>
       <div className="row">
 
         {movies.map(m => (
