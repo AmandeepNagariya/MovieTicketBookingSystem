@@ -12,7 +12,7 @@ const orderRes = await api.post("/payment/create-order", {
 
       // Accessing 'id' and 'amount' directly from your updated controller return
       const options = {
-        key: "rzp_test_STtAAjNYUbAOuD", // Your active KeyId
+        key: "rzp_test_TjI7NHqkWc5g5s", // Your active KeyId
         amount: orderRes.data.amount * 100, // Razorpay amount in paise
         currency: "INR",
         name: "Cinema Ticket",
